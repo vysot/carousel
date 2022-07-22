@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  background-color: grey;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel {
+  width: 60%;
+  height: 100px;
+  background-color: aliceblue;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.slide {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideshow 3s linear infinite;
+}
+.slide:hover {
+  animation-play-state: paused;
+}
+.slide__image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+@keyframes slideshow {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
